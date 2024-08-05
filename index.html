@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkVPN - Максимальная скорость и безопасность</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+
+    <script src="crypto-js.js"></script>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="#" id="homeLink" class="logo">DarkVPN</a>
+            <div class="nav-links">
+                <a href="#" id="homeLink">Основная</a>
+                <a href="#" id="guideLink">Руководство</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="homePage">
+        <section class="hero">
+            <img src="DarkVPN_LOGO.png" class="logo-img">
+            <div class="Title">DarkVPN</div>
+            <div class="Tile2">DarkVPN - The Fastest VPN ever</div>
+            <button class="cta-button" id="openDownloadModal">Купить</button>
+            <div class="gradient-background">
+                <div class="rotating-gradient"></div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <img src="images/arrows.png" alt="Скорость">
+                <h3>Молниеносная Скорость</h3>
+                <p>Наши передовые технологии обеспечивают максимальную скорость без ущерба для безопасности</p>
+            </div>
+            <div class="feature">
+                <img src="images/sparkles.png" alt="Безопасность">
+                <h3>Непроницаемая Защита</h3>
+                <p>Используем самые современные методы шифрования для защиты вашей приватности</p>
+            </div>
+            <div class="feature">
+                <img src="images/dpi.png" alt="Маскировка">
+                <h3>Невидимость в Сети</h3>
+                <p>Наша технология маскировки DPI делает ваш трафик неотличимым от обычного</p>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stats-content">
+                <div class="stat">
+                    <div class="stat-value">10 мс</div>
+                    <div class="stat-label">Средний пинг</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">342 Мб/с</div>
+                    <div class="stat-label">Средняя скорость</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">99.9%</div>
+                    <div class="stat-label">Время безотказной работы</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-us">
+            <div class="title-small">DarkVPN - Гениально</div>
+            <p>Тут, в отличие от NordVPN и ProtonVPN, самые передовые технологии криптографии обеспечивают
+                высокий уровень защиты. Наши мощные сервера позволяют поддерживать высокую скорость даже при пиковых
+                нагрузках.</p>
+            <p>Уникальная технология маскировки DPI (Deep Packet Inspection) нашей разработки делает трафик неотличимым от
+                обычного. Это означает, что вы
+                можете свободно пользоваться интернетом без ограничений, сохраняя при этом полную анонимность.</p>
+        </section>
+
+        <section class="platforms">
+            <h2>Поддерживаемые платформы:</h2>
+            <div class="platform-icons">
+                <div class="platform-icon" data-platform="Chrome">
+                    <img src="platforms_logos/chrome.png" alt="Chrome">
+                    <button class="download-button">Скачать</button>
+                </div>
+                <div class="platform-icon" data-platform="Windows">
+                    <img src="platforms_logos/windows.png" alt="Windows">
+                    <button class="download-button disabled">Скоро</button>
+                </div>
+                <div class="platform-icon" data-platform="MacOS">
+                    <img src="platforms_logos/macos.png" alt="MacOS">
+                    <button class="download-button disabled">Скоро</button>
+                </div>
+                <div class="platform-icon" data-platform="Linux">
+                    <img src="platforms_logos/linux.png" alt="Linux">
+                    <button class="download-button disabled">Скоро</button>
+                </div>
+                <div class="platform-icon" data-platform="Android">
+                    <img src="platforms_logos/android.png" alt="Android">
+                    <button class="download-button disabled">Скоро</button>
+                </div>
+                <div class="platform-icon" data-platform="iOS">
+                    <img src="platforms_logos/ios.png" alt="iOS">
+                    <button class="download-button disabled">Скоро</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal" id="downloadModal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">×</span>
+                <h2>Скачать DarkVPN</h2>
+                <p>Введите код для скачивания:</p>
+                <input type="text" id="codeInput" placeholder="Введите код">
+                <button id="downloadBtn">Скачать</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container guide" id="guidePage">
+        <h2>Руководство по настройке и подключению</h2>
+        <div class="guide-content">
+            <div class="guide-step">
+                <h3>Шаг 1: Скачивание приложения</h3>
+                <p>Перейдите на главную страницу и нажмите кнопку "Скачать" для вашей платформы.</p>
+                <img src="/api/placeholder/800/400" alt="Скачивание приложения">
+            </div>
+            <div class="guide-step">
+                <h3>Шаг 2: Установка</h3>
+                <p>Запустите скачанный файл и следуйте инструкциям установщика.</p>
+                <img src="/api/placeholder/800/400" alt="Установка приложения">
+            </div>
+            <div class="guide-step">
+                <h3>Шаг 3: Запуск и авторизация</h3>
+                <p>Откройте приложение и войдите в свой аккаунт или создайте новый.</p>
+                <img src="/api/placeholder/800/400" alt="Авторизация">
+            </div>
+            <div class="guide-step">
+                <h3>Шаг 4: Выбор сервера</h3>
+                <p>Выберите предпочитаемый сервер из списка доступных локаций.</p>
+                <img src="/api/placeholder/800/400" alt="Выбор сервера">
+            </div>
+            <div class="guide-step">
+                <h3>Шаг 5: Подключение</h3>
+                <p>Нажмите кнопку "Подключиться" для установки VPN-соединения.</p>
+                <img src="/api/placeholder/800/400" alt="Подключение">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="checkfile_obf.js"></script>
+</body>
+</html>

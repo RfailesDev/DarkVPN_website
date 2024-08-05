@@ -1,0 +1,664 @@
+Project structure:
+
+darkvpn_website/
+├── images/
+│   ├── arrows.png
+│   ├── dpi.png
+│   ├── lines.png
+│   └── sparkles.png
+├── DarkVPN_LOGO.png
+├── GenerateProjectShort.py
+├── ProjectOneFile.txt
+├── index.html
+├── main.js
+├── styles.css
+└── styles2.css
+
+
+Project files:
+
+index.html
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkVPN - Максимальная скорость и безопасность</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="#" id="homeLink" class="logo">DarkVPN</a>
+            <div class="nav-links">
+                <a href="#" id="homeLink">Основная</a>
+                <a href="#" id="guideLink">Руководство</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="homePage">
+        <section class="hero">
+            <img src="DarkVPN_LOGO.png" class="logo-img">
+            <div class="Title">DarkVPN</div>
+            <div class="Tile2">DarkVPN - The Fastest VPN ever</div>
+            <button class="cta-button" id="openDownloadModal">Купить</button>
+            <div class="gradient-background">
+                <div class="rotating-gradient"></div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <img src="images/arrows.png" alt="Скорость">
+                <h3>Молниеносная Скорость</h3>
+                <p>Наши передовые технологии обеспечивают максимальную скорость без ущерба для безопасности</p>
+            </div>
+            <div class="feature">
+                <img src="images/sparkles.png" alt="Безопасность">
+                <h3>Непроницаемая Защита</h3>
+                <p>Используем самые современные методы шифрования для защиты вашей приватности</p>
+            </div>
+            <div class="feature">
+                <img src="images/dpi.png" alt="Маскировка">
+                <h3>Невидимость в Сети</h3>
+                <p>Наша технология маскировки DPI делает ваш трафик неотличимым от обычного</p>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stats-content">
+                <div class="stat">
+                    <div class="stat-value">10 мс</div>
+                    <div class="stat-label">Средний пинг</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">342 Мб/с</div>
+                    <div class="stat-label">Средняя скорость</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">99.9%</div>
+                    <div class="stat-label">Время безотказной работы</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-us">
+            <div class="title-small">DarkVPN - Гениально</div>
+            <p>Тут, в отличие от NordVPN и ProtonVPN, самые передовые технологии криптографии обеспечивают
+                высокий уровень защиты. Наши мощные сервера позволяют поддерживать высокую скорость даже при пиковых
+                нагрузках.</p>
+            <p>Уникальная технология маскировки DPI (Deep Packet Inspection) нашей разработки делает трафик неотличимым от
+                обычного. Это означает, что вы
+                можете свободно пользоваться интернетом без ограничений, сохраняя при этом полную анонимность.</p>
+        </section>
+
+        <section class="platforms">
+            <h2>Поддерживаемые платформы:</h2>
+            <div class="platform-icons">
+                <div class="platform-icon" data-platform="Chrome">
+                    <img src="/api/placeholder/80/80" alt="Chrome">
+                    <button class="download-button">Скачать</button>
+                </div>
+                <div class="platform-icon" data-platform="Windows">
+                    <img src="/api/placeholder/80/80" alt="Windows">
+                    <button class="download-button disabled">Скоро</button>
+                </div>
+                <div class="platform-icon" data-platform="MacOS">
+                    <img src="/api/placeholder/80/80" alt="MacOS">
+                    <button class="download-button disabled">Скоро</button>
+                </div>
+                <div class="platform-icon" data-platform="Linux">
+                    <img src="/api/placeholder/80/80" alt="Linux">
+                    <button class="download-button disabled">Скоро</button>
+                </div>
+                <div class="platform-icon" data-platform="Android">
+                    <img src="/api/placeholder/80/80" alt="Android">
+                    <button class="download-button disabled">Скоро</button>
+                </div>
+                <div class="platform-icon" data-platform="iOS">
+                    <img src="/api/placeholder/80/80" alt="iOS">
+                    <button class="download-button disabled">Скоро</button>
+                </div>
+                <div class="platform-icon" data-platform="AndroidTV">
+                    <img src="/api/placeholder/80/80" alt="AndroidTV">
+                    <button class="download-button disabled">Скоро</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal" id="downloadModal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">×</span>
+                <h2>Скачать DarkVPN</h2>
+                <p>Введите код для скачивания:</p>
+                <input type="text" id="codeInput" placeholder="Введите код">
+                <button id="downloadBtn">Скачать</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container guide" id="guidePage">
+        <h2>Руководство по настройке и подключению</h2>
+        <div class="guide-content">
+            <div class="guide-step">
+                <h3>Шаг 1: Скачивание приложения</h3>
+                <p>Перейдите на главную страницу и нажмите кнопку "Скачать" для вашей платформы.</p>
+                <img src="/api/placeholder/800/400" alt="Скачивание приложения">
+            </div>
+            <div class="guide-step">
+                <h3>Шаг 2: Установка</h3>
+                <p>Запустите скачанный файл и следуйте инструкциям установщика.</p>
+                <img src="/api/placeholder/800/400" alt="Установка приложения">
+            </div>
+            <div class="guide-step">
+                <h3>Шаг 3: Запуск и авторизация</h3>
+                <p>Откройте приложение и войдите в свой аккаунт или создайте новый.</p>
+                <img src="/api/placeholder/800/400" alt="Авторизация">
+            </div>
+            <div class="guide-step">
+                <h3>Шаг 4: Выбор сервера</h3>
+                <p>Выберите предпочитаемый сервер из списка доступных локаций.</p>
+                <img src="/api/placeholder/800/400" alt="Выбор сервера">
+            </div>
+            <div class="guide-step">
+                <h3>Шаг 5: Подключение</h3>
+                <p>Нажмите кнопку "Подключиться" для установки VPN-соединения.</p>
+                <img src="/api/placeholder/800/400" alt="Подключение">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+```
+
+
+main.js
+```js
+$(document).ready(function () {
+    // Переключение между вкладками
+    $('.nav-link').click(function () {
+        $('.nav-link').removeClass('active');
+        $(this).addClass('active');
+
+        let targetId = $(this).attr('href');
+        $('.content-section').hide();
+        $(targetId).show();
+    });
+
+    // Обработка наведения на иконки платформ
+    $('.platform-icon').hover(
+        function () {
+            $(this).css('transform', 'scale(1.05)');
+        },
+        function () {
+            $(this).css('transform', 'scale(1)');
+        }
+    );
+
+    // Обработка клика по кнопке "Скачать"
+    $('.download-button').click(function () {
+        let platform = $(this).parent().data('platform');
+        if (platform === 'Chrome') {
+            // Начало скачивания для Chrome
+            window.location.href = '/downloads/darkvpn-chrome.zip'; // Замените на реальный путь к файлу
+        } else {
+            // Отображение модального окна для других платформ
+            $('#downloadModal').fadeIn();
+            $('#downloadModal').data('platform', platform); // Сохранение информации о платформе
+        }
+    });
+
+    // Закрытие модального окна
+    $('#closeModal').click(function () {
+        $('#downloadModal').fadeOut();
+    });
+
+    // Обработка отправки формы в модальном окне
+    $('#downloadForm').submit(function (event) {
+        event.preventDefault();
+
+        let enteredCode = $('#codeInput').val();
+        let platform = $('#downloadModal').data('platform');
+
+        // Хеширование введенного кода (замените на реальную логику хеширования)
+        let hashedCode = CryptoJS.SHA256(enteredCode).toString();
+
+        // Проверка хеша (замените на реальный хеш)
+        let correctHash = 'YOUR_REAL_HASH_HERE';
+
+        if (hashedCode === correctHash) {
+            // Начало скачивания для соответствующей платформы
+            window.location.href = `/downloads/darkvpn-${platform.toLowerCase()}.zip`; // Замените на реальные пути
+        } else {
+            // Отображение сообщения об ошибке
+            $('#codeError').text('Неверный код.');
+        }
+    });
+});
+```
+
+
+styles.css
+```css
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --accent-color: #6a1b9a;
+  --secondary-color: #4a148c;
+  --hover-color: #8e24aa;
+  --color2: rgb(0 0 0 / 23%);
+  --content-width: 80%; /* Ширина контента */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Навигация */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(18, 18, 18, 0.9);
+  padding: 1rem 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--content-width); /* Ограничиваем ширину контента */
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 2rem;
+  transition: color 0.3s ease;
+  font-weight: 500; /* Делаем текст ссылок чуть жирнее */
+}
+
+.nav-links a:hover {
+  color: var(--hover-color);
+}
+
+/* Контент */
+.container {
+  max-width: var(--content-width); /* Ограничиваем ширину контента */
+  margin: 80px auto 0;
+  padding: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+/* Герой */
+.hero {
+  display: flex;
+  text-align: center;
+  /* padding: 4rem 0; */
+  height: calc(100vh - 3rem);
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.logo-img {
+  position: relative;
+  height: 50%;
+  aspect-ratio: 1;
+  z-index: 2;
+}
+
+.Title {
+  display: flex;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 10vh;
+  line-height: 1;
+  margin-top: 0;
+  font-weight: 700;
+  z-index: 2;
+  justify-content: center;
+}
+.Tile2 {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  /* font-size: 30px; */
+  font-size: 3vh;
+  line-height: 1;
+  margin-top: 0;
+  font-weight: 500;
+  z-index: 2;
+  margin-bottom: 50px;
+}
+
+/* Кнопка призыва к действию */
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 1.2vh 4vh;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  z-index: 2;
+  position: relative;
+  /* aspect-ratio: 3; */
+  font-size: 2vh;
+}
+
+.cta-button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Особенности */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.feature {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--color2);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-2px);
+}
+
+.feature img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+/* Статистика */
+.stats {
+  /* background-color: var(--secondary-color); */
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 4rem;
+  display: flex;
+   /* Равномерное распределение элементов */
+  justify-content: space-around;
+  /* width: max-content; */
+  border: #ffffff0f solid 1px;
+  /* width: 600px; */
+}
+
+.stat {
+  display: flex;
+  text-align: center;
+  gap: 10px;
+  /* width: 100%; */
+  /* border-bottom: white solid 1px; */
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Платформы */
+.platforms {
+  margin-top: 4rem;
+}
+
+.platform-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.platform-icon {
+  width: 80px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.platform-icon:hover {
+  transform: scale(1.05);
+}
+
+.platform-icon img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.download-button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: var(--hover-color);
+}
+
+.download-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: var(--bg-color);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.close {
+  color: var(--text-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: var(--hover-color);
+}
+
+#codeInput {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+#downloadBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#downloadBtn:hover {
+  background-color: var(--hover-color);
+}
+
+/* Руководство */
+.guide {
+  display: none;
+}
+
+.guide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guide-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  max-width: 100%; /* Ширина изображения подстраивается под контент */
+}
+
+.guide-step img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+/* Стили для Why Us */
+.why-us {
+  background-color: var(--color2);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.why-us p {
+  margin-bottom: 1rem;
+}
+
+.stats-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+```
+
+
+styles2.css
+```css
+.gradient-background {
+    border-radius: 99999px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 130vw;
+    min-width: 1000px;
+    height: 130vh;
+    transform: translate(-50%, -50%) scale(0.5);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: blur(200px);
+    pointer-events: none;
+}
+
+.rotating-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(from 0deg, #000000, #8a2be2, #000000, #4c00ff, #000000);
+    animation: rotateGradient 8s linear infinite;
+}
+
+@keyframes rotateGradient {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.title-small {
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    color: var(--text-color);
+}
+```
+
+

@@ -1,0 +1,507 @@
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --accent-color: #6a1b9a;
+  --secondary-color: #4a148c;
+  --hover-color: #8e24aa;
+  --color2: rgb(0 0 0 / 23%);
+  --content-width: 80%; /* Ширина контента */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Навигация */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(18, 18, 18, 0.9);
+  padding: 1rem 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--content-width); /* Ограничиваем ширину контента */
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 2rem;
+  transition: color 0.3s ease;
+  font-weight: 500; /* Делаем текст ссылок чуть жирнее */
+}
+
+.nav-links a:hover {
+  color: var(--hover-color);
+}
+
+/* Контент */
+.container {
+  max-width: var(--content-width); /* Ограничиваем ширину контента */
+  margin: 80px auto 0;
+  padding: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+/* Герой */
+.hero {
+  display: flex;
+  text-align: center;
+  /* padding: 4rem 0; */
+  height: calc(100vh - 3rem);
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.logo-img {
+  position: relative;
+  height: 50%;
+  aspect-ratio: 1;
+  z-index: 2;
+}
+
+.Title {
+  display: flex;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 10vh;
+  line-height: 1;
+  margin-top: 0;
+  font-weight: 700;
+  z-index: 2;
+  justify-content: center;
+}
+.Tile2 {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  /* font-size: 30px; */
+  font-size: 3vh;
+  line-height: 1;
+  margin-top: 0;
+  font-weight: 500;
+  z-index: 2;
+  margin-bottom: 50px;
+}
+
+/* Кнопка призыва к действию */
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 1.2vh 4vh;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  z-index: 2;
+  position: relative;
+  /* aspect-ratio: 3; */
+  font-size: 2vh;
+}
+
+.cta-button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Особенности */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.feature {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--color2);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-2px);
+}
+
+.feature img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+/* Статистика */
+.stats {
+  /* background-color: var(--secondary-color); */
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 4rem;
+  display: flex;
+   /* Равномерное распределение элементов */
+  justify-content: space-around;
+  /* width: max-content; */
+  border: #ffffff0f solid 1px;
+  /* width: 600px; */
+}
+
+.stat {
+  display: flex;
+  text-align: center;
+  gap: 10px;
+  /* width: 100%; */
+  /* border-bottom: white solid 1px; */
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Платформы */
+.platforms {
+  margin-top: 4rem;
+}
+
+.platform-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.platform-icon {
+  /* width: 80px; */
+  /* height: 150px; */
+  /* height: fit-content; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+  padding: 10px;
+  border: 1px solid #ffffff0f;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.platform-icon:hover {
+  transform: scale(1.05);
+}
+
+.platform-icon img {
+  width: auto;
+  height: 100px;
+  /* margin-bottom: 0.5rem; */
+}
+
+.download-button {
+  background-color: #ffffff1c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.download-button:hover {
+  background-color: var(--hover-color);
+}
+
+.download-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: var(--bg-color);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.close {
+  color: var(--text-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: var(--hover-color);
+}
+
+#codeInput {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+#downloadBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#downloadBtn:hover {
+  background-color: var(--hover-color);
+}
+
+/* Руководство */
+.guide {
+  display: none;
+}
+
+.guide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guide-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  max-width: 100%; /* Ширина изображения подстраивается под контент */
+}
+
+.guide-step img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+/* Стили для Why Us */
+.why-us {
+  background-color: var(--color2);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.why-us p {
+  margin-bottom: 1rem;
+}
+
+.stats-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* ====================== Мобильные устройства (до 768px) ====================== */
+@media (max-width: 768px) {
+  :root {
+    --content-width: 95%; /* Увеличиваем ширину контента на мобильных */
+  }
+
+  .navbar-content {
+    /* flex-direction: column; */
+    /* align-items: flex-start; */ /* Выравниваем элементы по левому краю */
+  }
+
+  .nav-links {
+    /* margin-top: 1rem; */ /* Добавляем отступ сверху для ссылок */
+    /* flex-direction: column; */ /* Располагаем ссылки вертикально */
+    gap: 10px;
+    width: 100%;
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .nav-links a {
+    margin-left: 0; /* Убираем отступ слева для ссылок */
+    /* margin-bottom: 0.5rem; */ /* Добавляем отступ снизу для ссылок */
+  }
+
+  .hero {
+    padding: 2rem 0; /* Уменьшаем отступы */
+    gap: 10px;
+  }
+
+  .logo-img {
+    height: 30%; /* Уменьшаем размер логотипа */
+  }
+
+  .Title {
+    font-size: 3rem; /* Уменьшаем размер заголовка */
+  }
+
+  .Tile2 {
+    font-size: 1.2rem; /* Уменьшаем размер подзаголовка */
+  }
+
+  .cta-button {
+    padding: 1rem 2rem; /* Уменьшаем отступы кнопки */
+    font-size: 1rem; /* Уменьшаем размер шрифта кнопки */
+  }
+
+  .features {
+    grid-template-columns: 1fr; /* Отображаем блоки с особенностями в одну колонку */
+  }
+
+  .stats {
+    flex-direction: column; /* Отображаем статистику в одну колонку */
+    align-items: center;
+  }
+
+  .stat {
+    margin-bottom: 1rem; /* Добавляем отступ снизу для каждого элемента статистики */
+  }
+
+  .platform-icons {
+    justify-content: center; /* Центрируем иконки платформ */
+  }
+
+  .guide-step {
+    margin-bottom: 1rem; /* Уменьшаем отступы между шагами */
+  }
+
+  .guide-step img {
+    margin-top: 0.5rem; /* Уменьшаем отступ сверху для изображений */
+  }
+
+  .why-us {
+    padding: 1rem; /* Уменьшаем отступы */
+  }
+}
+
+/* ====================== Планшеты (от 768px до 1024px) ====================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    --content-width: 90%; /* Увеличиваем ширину контента на планшетах */
+  }
+
+  .hero {
+  }
+
+  .logo-img {
+    height: 40%; /* Уменьшаем размер логотипа */
+  }
+
+  .Title {
+    font-size: 5rem; /* Уменьшаем размер заголовка */
+  }
+
+  .Tile2 {
+    font-size: 1.5rem; /* Уменьшаем размер подзаголовка */
+  }
+
+  .cta-button {
+    font-size: 1.2rem; /* Уменьшаем размер шрифта кнопки */
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr); /* Отображаем блоки с особенностями в две колонки */
+  }
+
+  .stats {
+    flex-direction: row; /* Отображаем статистику в две колонки */
+    flex-wrap: wrap; /* Разрешаем перенос элементов */
+    justify-content: space-around;
+  }
+
+  .stat {
+    margin-bottom: 1rem; /* Добавляем отступ снизу для каждого элемента статистики */
+  }
+}
+
+@media (max-width: 1352px) {
+  .stats-content {
+    flex-direction: column;
+  }
+}
+@media (max-width: 550px) {
+  .logo {
+    display: none;
+  }
+}
