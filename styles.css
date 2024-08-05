@@ -234,13 +234,9 @@ h2 {
   align-items: center;
   transition: transform 0.3s ease;
   padding: 10px;
-  border: 1px solid #ffffff0f;
+  /* border: 1px solid #ffffff0f; */
   border-radius: 5px;
   gap: 10px;
-}
-
-.platform-icon:hover {
-  transform: scale(1.05);
 }
 
 .platform-icon img {

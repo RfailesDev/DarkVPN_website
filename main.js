@@ -9,15 +9,6 @@ $(document).ready(function () {
         $(targetId).show();
     });
 
-    // Обработка наведения на иконки платформ
-    $('.platform-icon').hover(
-        function () {
-            $(this).css('transform', 'scale(1.05)');
-        },
-        function () {
-            $(this).css('transform', 'scale(1)');
-        }
-    );
 
     // Обработка клика по кнопке "Скачать"
     $('.download-button').click(function () {
